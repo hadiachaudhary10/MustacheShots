@@ -13,6 +13,8 @@
 		D79006C12B28E4E0007D0263 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D79006C02B28E4E0007D0263 /* Preview Assets.xcassets */; };
 		D79006C32B28E4E0007D0263 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006C22B28E4E0007D0263 /* Persistence.swift */; };
 		D79006C62B28E4E0007D0263 /* MustacheShots.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D79006C42B28E4E0007D0263 /* MustacheShots.xcdatamodeld */; };
+		D79006CE2B28ECAC007D0263 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D79006CD2B28ECAC007D0263 /* .swiftlint.yml */; };
+		D79006D42B28EDF3007D0263 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006D32B28EDF3007D0263 /* Color+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		D79006C02B28E4E0007D0263 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D79006C22B28E4E0007D0263 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D79006C52B28E4E0007D0263 /* MustacheShots.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MustacheShots.xcdatamodel; sourceTree = "<group>"; };
+		D79006CD2B28ECAC007D0263 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		D79006D32B28EDF3007D0263 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 		D79006AD2B28E4DE007D0263 = {
 			isa = PBXGroup;
 			children = (
+				D79006CD2B28ECAC007D0263 /* .swiftlint.yml */,
 				D79006B82B28E4DE007D0263 /* MustacheShots */,
 				D79006B72B28E4DE007D0263 /* Products */,
 			);
@@ -55,10 +60,10 @@
 		D79006B82B28E4DE007D0263 /* MustacheShots */ = {
 			isa = PBXGroup;
 			children = (
-				D79006B92B28E4DE007D0263 /* MustacheShotsApp.swift */,
-				D79006BB2B28E4DE007D0263 /* ContentView.swift */,
+				D79006D22B28EDE1007D0263 /* Helpers */,
+				D79006D12B28EDBE007D0263 /* Backend */,
+				D79006D02B28ED91007D0263 /* App */,
 				D79006BD2B28E4E0007D0263 /* Assets.xcassets */,
-				D79006C22B28E4E0007D0263 /* Persistence.swift */,
 				D79006C42B28E4E0007D0263 /* MustacheShots.xcdatamodeld */,
 				D79006BF2B28E4E0007D0263 /* Preview Content */,
 			);
@@ -73,6 +78,31 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D79006D02B28ED91007D0263 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D79006B92B28E4DE007D0263 /* MustacheShotsApp.swift */,
+				D79006BB2B28E4DE007D0263 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D79006D12B28EDBE007D0263 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				D79006C22B28E4E0007D0263 /* Persistence.swift */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		D79006D22B28EDE1007D0263 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D79006D32B28EDF3007D0263 /* Color+Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +113,7 @@
 				D79006B22B28E4DE007D0263 /* Sources */,
 				D79006B32B28E4DE007D0263 /* Frameworks */,
 				D79006B42B28E4DE007D0263 /* Resources */,
+				D79006CF2B28ECEC007D0263 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -117,6 +148,9 @@
 				Base,
 			);
 			mainGroup = D79006AD2B28E4DE007D0263;
+			packageReferences = (
+				D79006CC2B28EAB8007D0263 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = D79006B72B28E4DE007D0263 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -131,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D79006CE2B28ECAC007D0263 /* .swiftlint.yml in Resources */,
 				D79006C12B28E4E0007D0263 /* Preview Assets.xcassets in Resources */,
 				D79006BE2B28E4E0007D0263 /* Assets.xcassets in Resources */,
 			);
@@ -138,12 +173,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D79006CF2B28ECEC007D0263 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D79006B22B28E4DE007D0263 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D79006C32B28E4E0007D0263 /* Persistence.swift in Sources */,
+				D79006D42B28EDF3007D0263 /* Color+Extensions.swift in Sources */,
 				D79006C62B28E4E0007D0263 /* MustacheShots.xcdatamodeld in Sources */,
 				D79006BC2B28E4DE007D0263 /* ContentView.swift in Sources */,
 				D79006BA2B28E4DE007D0263 /* MustacheShotsApp.swift in Sources */,
@@ -347,6 +404,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D79006CC2B28EAB8007D0263 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCVersionGroup section */
 		D79006C42B28E4E0007D0263 /* MustacheShots.xcdatamodeld */ = {
