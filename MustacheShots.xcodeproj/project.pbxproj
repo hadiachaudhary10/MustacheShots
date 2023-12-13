@@ -15,6 +15,10 @@
 		D79006C62B28E4E0007D0263 /* MustacheShots.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D79006C42B28E4E0007D0263 /* MustacheShots.xcdatamodeld */; };
 		D79006CE2B28ECAC007D0263 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D79006CD2B28ECAC007D0263 /* .swiftlint.yml */; };
 		D79006D42B28EDF3007D0263 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006D32B28EDF3007D0263 /* Color+Extensions.swift */; };
+		D79006D62B28EFA1007D0263 /* RecordingsListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006D52B28EFA1007D0263 /* RecordingsListScreen.swift */; };
+		D79006D82B28F994007D0263 /* RecordingsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006D72B28F994007D0263 /* RecordingsListViewModel.swift */; };
+		D79006DA2B290035007D0263 /* VideoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006D92B290035007D0263 /* VideoScreen.swift */; };
+		D79006DC2B290061007D0263 /* VideoScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006DB2B290061007D0263 /* VideoScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		D79006C52B28E4E0007D0263 /* MustacheShots.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MustacheShots.xcdatamodel; sourceTree = "<group>"; };
 		D79006CD2B28ECAC007D0263 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D79006D32B28EDF3007D0263 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		D79006D52B28EFA1007D0263 /* RecordingsListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsListScreen.swift; sourceTree = "<group>"; };
+		D79006D72B28F994007D0263 /* RecordingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsListViewModel.swift; sourceTree = "<group>"; };
+		D79006D92B290035007D0263 /* VideoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScreen.swift; sourceTree = "<group>"; };
+		D79006DB2B290061007D0263 /* VideoScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScreenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,10 @@
 			children = (
 				D79006B92B28E4DE007D0263 /* MustacheShotsApp.swift */,
 				D79006BB2B28E4DE007D0263 /* ContentView.swift */,
+				D79006D52B28EFA1007D0263 /* RecordingsListScreen.swift */,
+				D79006D72B28F994007D0263 /* RecordingsListViewModel.swift */,
+				D79006D92B290035007D0263 /* VideoScreen.swift */,
+				D79006DB2B290061007D0263 /* VideoScreenViewModel.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -200,9 +212,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D79006C32B28E4E0007D0263 /* Persistence.swift in Sources */,
+				D79006DC2B290061007D0263 /* VideoScreenViewModel.swift in Sources */,
 				D79006D42B28EDF3007D0263 /* Color+Extensions.swift in Sources */,
 				D79006C62B28E4E0007D0263 /* MustacheShots.xcdatamodeld in Sources */,
+				D79006D82B28F994007D0263 /* RecordingsListViewModel.swift in Sources */,
+				D79006D62B28EFA1007D0263 /* RecordingsListScreen.swift in Sources */,
 				D79006BC2B28E4DE007D0263 /* ContentView.swift in Sources */,
+				D79006DA2B290035007D0263 /* VideoScreen.swift in Sources */,
 				D79006BA2B28E4DE007D0263 /* MustacheShotsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +351,8 @@
 				DEVELOPMENT_TEAM = H7NXK4YGF9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera required for preview.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "PhotoLibrary required.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -364,6 +382,8 @@
 				DEVELOPMENT_TEAM = H7NXK4YGF9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera required for preview.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "PhotoLibrary required.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

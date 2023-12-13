@@ -13,7 +13,7 @@ struct MustacheShotsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RecordingsListScreen(viewModel: RecordingsListViewModel())
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
