@@ -51,7 +51,7 @@ struct RecordingsListScreen: View {
       }
       .padding(.top)
       .navigationTitle("Recordings List")
-      .navigationBarItems(trailing: NavigationLink(destination: CameraView()) {
+      .navigationBarItems(trailing: NavigationLink(destination: VideoScreen()) {
         Image(systemName: "plus")
       })
       .toolbarColorScheme(.dark, for: .navigationBar)

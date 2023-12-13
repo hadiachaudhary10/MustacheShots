@@ -35,6 +35,7 @@
 		D79006D72B28F994007D0263 /* RecordingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsListViewModel.swift; sourceTree = "<group>"; };
 		D79006D92B290035007D0263 /* VideoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScreen.swift; sourceTree = "<group>"; };
 		D79006DB2B290061007D0263 /* VideoScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScreenViewModel.swift; sourceTree = "<group>"; };
+		D79006DD2B29EFA7007D0263 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +96,7 @@
 				D79006D72B28F994007D0263 /* RecordingsListViewModel.swift */,
 				D79006D92B290035007D0263 /* VideoScreen.swift */,
 				D79006DB2B290061007D0263 /* VideoScreenViewModel.swift */,
+				D79006DD2B29EFA7007D0263 /* Experience.rcproject */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -352,6 +354,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera required for preview.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone is required.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "PhotoLibrary required.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -383,6 +386,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera required for preview.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone is required.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "PhotoLibrary required.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
