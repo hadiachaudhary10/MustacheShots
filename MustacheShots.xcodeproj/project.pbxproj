@@ -40,7 +40,6 @@
 		D79006D72B28F994007D0263 /* RecordingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsListViewModel.swift; sourceTree = "<group>"; };
 		D79006D92B290035007D0263 /* VideoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScreen.swift; sourceTree = "<group>"; };
 		D79006DB2B290061007D0263 /* VideoScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScreenViewModel.swift; sourceTree = "<group>"; };
-		D79006DD2B29EFA7007D0263 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		D79006E22B2A3F48007D0263 /* Mustache1.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Mustache1.rcproject; sourceTree = "<group>"; };
 		D79006E62B2A47BF007D0263 /* Mustache2.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Mustache2.rcproject; sourceTree = "<group>"; };
 		D79006EA2B2B05EC007D0263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +82,10 @@
 				D79006EA2B2B05EC007D0263 /* Info.plist */,
 				D79006D22B28EDE1007D0263 /* Helpers */,
 				D79006D12B28EDBE007D0263 /* Backend */,
+				D79006FB2B2B9415007D0263 /* RealityKitObjects */,
+				D79006FE2B2B94B8007D0263 /* ARView */,
+				D79006FC2B2B9456007D0263 /* RecordingList */,
+				D79006FD2B2B9478007D0263 /* VideoScreen */,
 				D79006D02B28ED91007D0263 /* App */,
 				D79006BD2B28E4E0007D0263 /* Assets.xcassets */,
 				D79006C42B28E4E0007D0263 /* MustacheShots.xcdatamodeld */,
@@ -104,16 +107,6 @@
 			children = (
 				D79006B92B28E4DE007D0263 /* MustacheShotsApp.swift */,
 				D79006BB2B28E4DE007D0263 /* ContentView.swift */,
-				D79006D52B28EFA1007D0263 /* RecordingsListScreen.swift */,
-				D79006E62B2A47BF007D0263 /* Mustache2.rcproject */,
-				D79006E22B2A3F48007D0263 /* Mustache1.rcproject */,
-				D79006D72B28F994007D0263 /* RecordingsListViewModel.swift */,
-				D79006D92B290035007D0263 /* VideoScreen.swift */,
-				D79006DB2B290061007D0263 /* VideoScreenViewModel.swift */,
-				D79006DD2B29EFA7007D0263 /* Experience.rcproject */,
-				D79006F52B2B8B38007D0263 /* MustacheTypes.swift */,
-				D79006F72B2B8B66007D0263 /* View+Extensions.swift */,
-				D79006F92B2B8C61007D0263 /* ARViewController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -130,8 +123,45 @@
 			isa = PBXGroup;
 			children = (
 				D79006D32B28EDF3007D0263 /* Color+Extensions.swift */,
+				D79006F72B2B8B66007D0263 /* View+Extensions.swift */,
+				D79006F52B2B8B38007D0263 /* MustacheTypes.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D79006FB2B2B9415007D0263 /* RealityKitObjects */ = {
+			isa = PBXGroup;
+			children = (
+				D79006E62B2A47BF007D0263 /* Mustache2.rcproject */,
+				D79006E22B2A3F48007D0263 /* Mustache1.rcproject */,
+			);
+			path = RealityKitObjects;
+			sourceTree = "<group>";
+		};
+		D79006FC2B2B9456007D0263 /* RecordingList */ = {
+			isa = PBXGroup;
+			children = (
+				D79006D72B28F994007D0263 /* RecordingsListViewModel.swift */,
+				D79006D52B28EFA1007D0263 /* RecordingsListScreen.swift */,
+			);
+			path = RecordingList;
+			sourceTree = "<group>";
+		};
+		D79006FD2B2B9478007D0263 /* VideoScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D79006D92B290035007D0263 /* VideoScreen.swift */,
+				D79006DB2B290061007D0263 /* VideoScreenViewModel.swift */,
+			);
+			path = VideoScreen;
+			sourceTree = "<group>";
+		};
+		D79006FE2B2B94B8007D0263 /* ARView */ = {
+			isa = PBXGroup;
+			children = (
+				D79006F92B2B8C61007D0263 /* ARViewController.swift */,
+			);
+			path = ARView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
