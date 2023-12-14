@@ -20,8 +20,10 @@
 		D79006DA2B290035007D0263 /* VideoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006D92B290035007D0263 /* VideoScreen.swift */; };
 		D79006DC2B290061007D0263 /* VideoScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006DB2B290061007D0263 /* VideoScreenViewModel.swift */; };
 		D79006E32B2A3F48007D0263 /* Mustache1.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = D79006E22B2A3F48007D0263 /* Mustache1.rcproject */; };
-		D79006E52B2A4546007D0263 /* Glasses.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = D79006E42B2A4546007D0263 /* Glasses.rcproject */; };
 		D79006E72B2A47BF007D0263 /* Mustache2.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = D79006E62B2A47BF007D0263 /* Mustache2.rcproject */; };
+		D79006F62B2B8B38007D0263 /* MustacheTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006F52B2B8B38007D0263 /* MustacheTypes.swift */; };
+		D79006F82B2B8B66007D0263 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006F72B2B8B66007D0263 /* View+Extensions.swift */; };
+		D79006FA2B2B8C61007D0263 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006F92B2B8C61007D0263 /* ARViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,9 +42,11 @@
 		D79006DB2B290061007D0263 /* VideoScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScreenViewModel.swift; sourceTree = "<group>"; };
 		D79006DD2B29EFA7007D0263 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		D79006E22B2A3F48007D0263 /* Mustache1.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Mustache1.rcproject; sourceTree = "<group>"; };
-		D79006E42B2A4546007D0263 /* Glasses.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Glasses.rcproject; sourceTree = "<group>"; };
 		D79006E62B2A47BF007D0263 /* Mustache2.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Mustache2.rcproject; sourceTree = "<group>"; };
 		D79006EA2B2B05EC007D0263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D79006F52B2B8B38007D0263 /* MustacheTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustacheTypes.swift; sourceTree = "<group>"; };
+		D79006F72B2B8B66007D0263 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		D79006F92B2B8C61007D0263 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +105,15 @@
 				D79006B92B28E4DE007D0263 /* MustacheShotsApp.swift */,
 				D79006BB2B28E4DE007D0263 /* ContentView.swift */,
 				D79006D52B28EFA1007D0263 /* RecordingsListScreen.swift */,
-				D79006E42B2A4546007D0263 /* Glasses.rcproject */,
 				D79006E62B2A47BF007D0263 /* Mustache2.rcproject */,
 				D79006E22B2A3F48007D0263 /* Mustache1.rcproject */,
 				D79006D72B28F994007D0263 /* RecordingsListViewModel.swift */,
 				D79006D92B290035007D0263 /* VideoScreen.swift */,
 				D79006DB2B290061007D0263 /* VideoScreenViewModel.swift */,
 				D79006DD2B29EFA7007D0263 /* Experience.rcproject */,
+				D79006F52B2B8B38007D0263 /* MustacheTypes.swift */,
+				D79006F72B2B8B66007D0263 /* View+Extensions.swift */,
+				D79006F92B2B8C61007D0263 /* ARViewController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -225,14 +231,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D79006C32B28E4E0007D0263 /* Persistence.swift in Sources */,
-				D79006E52B2A4546007D0263 /* Glasses.rcproject in Sources */,
 				D79006E32B2A3F48007D0263 /* Mustache1.rcproject in Sources */,
 				D79006DC2B290061007D0263 /* VideoScreenViewModel.swift in Sources */,
 				D79006D42B28EDF3007D0263 /* Color+Extensions.swift in Sources */,
+				D79006F62B2B8B38007D0263 /* MustacheTypes.swift in Sources */,
 				D79006C62B28E4E0007D0263 /* MustacheShots.xcdatamodeld in Sources */,
 				D79006D82B28F994007D0263 /* RecordingsListViewModel.swift in Sources */,
 				D79006D62B28EFA1007D0263 /* RecordingsListScreen.swift in Sources */,
+				D79006FA2B2B8C61007D0263 /* ARViewController.swift in Sources */,
 				D79006BC2B28E4DE007D0263 /* ContentView.swift in Sources */,
+				D79006F82B2B8B66007D0263 /* View+Extensions.swift in Sources */,
 				D79006DA2B290035007D0263 /* VideoScreen.swift in Sources */,
 				D79006E72B2A47BF007D0263 /* Mustache2.rcproject in Sources */,
 				D79006BA2B28E4DE007D0263 /* MustacheShotsApp.swift in Sources */,
