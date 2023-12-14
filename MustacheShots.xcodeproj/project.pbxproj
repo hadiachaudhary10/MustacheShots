@@ -42,6 +42,7 @@
 		D79006E22B2A3F48007D0263 /* Mustache1.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Mustache1.rcproject; sourceTree = "<group>"; };
 		D79006E42B2A4546007D0263 /* Glasses.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Glasses.rcproject; sourceTree = "<group>"; };
 		D79006E62B2A47BF007D0263 /* Mustache2.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Mustache2.rcproject; sourceTree = "<group>"; };
+		D79006EA2B2B05EC007D0263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 		D79006B82B28E4DE007D0263 /* MustacheShots */ = {
 			isa = PBXGroup;
 			children = (
+				D79006EA2B2B05EC007D0263 /* Info.plist */,
 				D79006D22B28EDE1007D0263 /* Helpers */,
 				D79006D12B28EDBE007D0263 /* Backend */,
 				D79006D02B28ED91007D0263 /* App */,
@@ -365,9 +367,10 @@
 				DEVELOPMENT_TEAM = H7NXK4YGF9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MustacheShots/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera required for preview.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone is required.";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "PhotoLibrary required.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "PhotoLibrary required.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -397,9 +400,10 @@
 				DEVELOPMENT_TEAM = H7NXK4YGF9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MustacheShots/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera required for preview.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone is required.";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "PhotoLibrary required.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "PhotoLibrary required.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
