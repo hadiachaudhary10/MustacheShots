@@ -21,18 +21,6 @@ struct VideoScreen: View {
   var body: some View {
     GeometryReader { geo in
       VStack {
-        HStack {
-          Spacer()
-          Picker(selectedMustache.rawValue, selection: $selectedMustache) {
-            ForEach(MustacheTypes.allCases, id: \.self) { type in
-              Text(type.rawValue)
-            }
-          }
-          .tint(Color.pink)
-          .pickerStyle(.menu)
-          .background(Color.pastelGrey)
-        }
-        .frame(width: geo.size.width, height: geo.size.height * 0.1)
         ARViewController(selectedMustache: $selectedMustache)
           .alert("Face Tracking Unavailable", isPresented: $isPresented) {
             Button {
@@ -48,9 +36,9 @@ struct VideoScreen: View {
               isPresented = true
             }
           }
-          .frame(height: geo.size.height * 0.75)
+          .frame(height: geo.size.height * 0.85)
         HStack {
-          Spacer()
+          Spacer(minLength: geo.size.width * 0.4)
           Button {
             if isRecording {
               Task {
@@ -79,10 +67,22 @@ struct VideoScreen: View {
               .frame(width: geo.size.width * 0.2, height: geo.size.width * 0.2)
           }
           Spacer()
+          HStack {
+            Picker(selectedMustache.rawValue, selection: $selectedMustache) {
+              ForEach(MustacheTypes.allCases, id: \.self) { type in
+                Text(type.rawValue)
+              }
+            }
+            .tint(Color.red)
+            .pickerStyle(.menu)
+            .background(Color.pastelGrey)
+          }
+          .frame(width: geo.size.width * 0.3, height: geo.size.height * 0.1)
         }
         .frame(width: geo.size.width, height: geo.size.height * 0.15)
       }
       .frame(width: geo.size.width, height: geo.size.height)
+      .background(.black)
     }
     .alert("Tagline for Video", isPresented: $presentAlert) {
       TextField("Enter tagline", text: $tagline)
