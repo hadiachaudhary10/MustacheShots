@@ -29,6 +29,8 @@ struct RecordingsListScreen: View {
   @StateObject var viewModel: VideoScreenViewModel
   @State private var presentAlert = false
   @State private var newTagline = ""
+  @StateObject private var keyboardHandler = KeyboardHandler()
+  @State var rowSize: CGSize = .zero
   @Environment(\.managedObjectContext) private var viewContext
   @FetchRequest(
     sortDescriptors: [NSSortDescriptor(keyPath: \Shot.duration, ascending: true)],
@@ -43,10 +45,10 @@ struct RecordingsListScreen: View {
               VStack(alignment: .center) {
                 VideoPlayer(player: AVPlayer(url: URL(string: shot.videoURL!)!))
                   .scaledToFit()
-                  .frame(width: geo.size.width * 0.3, height: geo.size.height * 0.2)
+                  .frame(width: rowSize.width * 0.3, height: rowSize.height * 0.17)
                   .cornerRadius(15)
               }
-              .frame(width: geo.size.width * 0.3, height: geo.size.height * 0.2)
+              .frame(width: rowSize.width * 0.3, height: rowSize.height * 0.2)
               VStack(alignment: .leading) {
                 HStack {
                   Text(shot.tag!)
@@ -69,15 +71,17 @@ struct RecordingsListScreen: View {
                 }
               }
               .padding(.vertical)
-              .frame(width: geo.size.width * 0.5, height: geo.size.height * 0.2)
+              .frame(width: rowSize.width * 0.5, height: rowSize.height * 0.2)
             }
-            .frame(width: geo.size.width * 0.9, height: geo.size.height * 0.2)
+            .frame(width: rowSize.width * 0.9, height: rowSize.height * 0.2)
             .background(Color.pastelGrey)
             .cornerRadius(15)
             .alert("Update Tagline", isPresented: $presentAlert) {
               TextField("Enter new tagline", text: $newTagline)
               Button("OK", action: {
-                viewModel.updateTagline(shotID: shot.id, updatedTagline: newTagline)
+                if !newTagline.isEmpty {
+                  viewModel.updateTagline(shotID: shot.id, updatedTagline: newTagline)
+                }
               })
             } message: {
               Text("")
@@ -85,6 +89,9 @@ struct RecordingsListScreen: View {
           }
         }
         .frame(width: geo.size.width, height: geo.size.height)
+        .onAppear {
+          rowSize = CGSize(width: geo.size.width, height: geo.size.height)
+        }
       }
       .padding(.top)
       .navigationTitle("Recordings List")

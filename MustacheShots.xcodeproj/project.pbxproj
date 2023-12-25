@@ -22,6 +22,7 @@
 		D79006F62B2B8B38007D0263 /* MustacheTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006F52B2B8B38007D0263 /* MustacheTypes.swift */; };
 		D79006F82B2B8B66007D0263 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006F72B2B8B66007D0263 /* View+Extensions.swift */; };
 		D79006FA2B2B8C61007D0263 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006F92B2B8C61007D0263 /* ARViewController.swift */; };
+		D7A414372B39EDEA00126895 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A414362B39EDEA00126895 /* KeyboardHandler.swift */; };
 		D7F8524F2B2EF54100DE10B6 /* ShotData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8524E2B2EF54100DE10B6 /* ShotData.swift */; };
 		D7F852512B2EF5AD00DE10B6 /* ShotsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F852502B2EF5AD00DE10B6 /* ShotsList.swift */; };
 		D7F852592B2EFA7400DE10B6 /* Shot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F852572B2EFA7400DE10B6 /* Shot+CoreDataClass.swift */; };
@@ -47,6 +48,7 @@
 		D79006F52B2B8B38007D0263 /* MustacheTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustacheTypes.swift; sourceTree = "<group>"; };
 		D79006F72B2B8B66007D0263 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		D79006F92B2B8C61007D0263 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		D7A414362B39EDEA00126895 /* KeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 		D7F8524E2B2EF54100DE10B6 /* ShotData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotData.swift; sourceTree = "<group>"; };
 		D7F852502B2EF5AD00DE10B6 /* ShotsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotsList.swift; sourceTree = "<group>"; };
 		D7F852572B2EFA7400DE10B6 /* Shot+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shot+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				D79006F72B2B8B66007D0263 /* View+Extensions.swift */,
 				D79006F52B2B8B38007D0263 /* MustacheTypes.swift */,
 				D7F8525B2B2F004600DE10B6 /* FetchedObjects.swift */,
+				D7A414362B39EDEA00126895 /* KeyboardHandler.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				D79006C32B28E4E0007D0263 /* Persistence.swift in Sources */,
 				D79006E32B2A3F48007D0263 /* Mustache1.rcproject in Sources */,
 				D79006DC2B290061007D0263 /* VideoScreenViewModel.swift in Sources */,
+				D7A414372B39EDEA00126895 /* KeyboardHandler.swift in Sources */,
 				D7F852512B2EF5AD00DE10B6 /* ShotsList.swift in Sources */,
 				D7F8524F2B2EF54100DE10B6 /* ShotData.swift in Sources */,
 				D7F852592B2EFA7400DE10B6 /* Shot+CoreDataClass.swift in Sources */,
