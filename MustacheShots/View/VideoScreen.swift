@@ -77,7 +77,7 @@ struct VideoScreen: View {
               }
               .tint(Color.red)
               .pickerStyle(.menu)
-              .background(Color.pastelGrey)
+              .background(Color.white)
             }
             .frame(width: geo.size.width * 0.3, height: geo.size.height * 0.1)
           }
