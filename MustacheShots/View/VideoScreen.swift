@@ -17,6 +17,7 @@ struct VideoScreen: View {
   @StateObject var viewModel: VideoScreenViewModel
   @State private var presentAlert = false
   @State private var tagline = ""
+  @StateObject private var keyboardHandler = KeyboardHandler()
   @Environment(\.dismiss) private var dismiss
   var body: some View {
     GeometryReader { geo in
@@ -37,49 +38,51 @@ struct VideoScreen: View {
             }
           }
           .frame(height: geo.size.height * 0.85)
-        HStack {
-          Spacer(minLength: geo.size.width * 0.4)
-          Button {
-            if isRecording {
-              Task {
-                do {
-                  self.url = try await stopRecording()
-                  isRecording = false
-                  shareVideo.toggle()
-                  presentAlert = true
-                } catch {
-                  print(error.localizedDescription)
-                }
-              }
-            } else {
-              startRecording(enableMicrophone: true) { error in
-                if let error = error {
-                  print(error.localizedDescription)
-                  return
-                }
-                isRecording = true
-              }
-            }
-          } label: {
-            Image(systemName: "record.circle")
-              .resizable()
-              .foregroundColor(isRecording ? .red : .white)
-              .frame(width: geo.size.width * 0.2, height: geo.size.width * 0.2)
-          }
-          Spacer()
+        if keyboardHandler.keyboardHeight == 0 {
           HStack {
-            Picker(selectedMustache.rawValue, selection: $selectedMustache) {
-              ForEach(MustacheTypes.allCases, id: \.self) { type in
-                Text(type.rawValue)
+            Spacer(minLength: geo.size.width * 0.4)
+            Button {
+              if isRecording {
+                Task {
+                  do {
+                    self.url = try await stopRecording()
+                    isRecording = false
+                    shareVideo.toggle()
+                    presentAlert = true
+                  } catch {
+                    print(error.localizedDescription)
+                  }
+                }
+              } else {
+                startRecording(enableMicrophone: true) { error in
+                  if let error = error {
+                    print(error.localizedDescription)
+                    return
+                  }
+                  isRecording = true
+                }
               }
+            } label: {
+              Image(systemName: "record.circle")
+                .resizable()
+                .foregroundColor(isRecording ? .red : .white)
+                .frame(width: geo.size.width * 0.2, height: geo.size.width * 0.2)
             }
-            .tint(Color.red)
-            .pickerStyle(.menu)
-            .background(Color.pastelGrey)
+            Spacer()
+            HStack {
+              Picker(selectedMustache.rawValue, selection: $selectedMustache) {
+                ForEach(MustacheTypes.allCases, id: \.self) { type in
+                  Text(type.rawValue)
+                }
+              }
+              .tint(Color.red)
+              .pickerStyle(.menu)
+              .background(Color.pastelGrey)
+            }
+            .frame(width: geo.size.width * 0.3, height: geo.size.height * 0.1)
           }
-          .frame(width: geo.size.width * 0.3, height: geo.size.height * 0.1)
+          .frame(width: geo.size.width, height: geo.size.height * 0.15)
         }
-        .frame(width: geo.size.width, height: geo.size.height * 0.15)
       }
       .frame(width: geo.size.width, height: geo.size.height)
       .background(.black)
