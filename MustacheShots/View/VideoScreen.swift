@@ -85,17 +85,17 @@ struct VideoScreen: View {
       .frame(width: geo.size.width, height: geo.size.height)
     }
     .alert("Tagline for Video", isPresented: $presentAlert) {
-      TextField("Enter your name", text: $tagline)
-      Button("OK", action: submit)
+      TextField("Enter tagline", text: $tagline)
+      Button("OK", action: {
+        Task {
+          if let url {
+            await viewModel.saveVideoURLToCoreData(videoURL: url, tag: tagline)
+            dismiss()
+          }
+        }
+      })
     } message: {
       Text("")
-    }
-  }
-  func submit() {
-    print("You entered \(tagline)")
-    if let url {
-      viewModel.saveVideoURLToCoreData(videoURL: url, tag: tagline)
-     dismiss()
     }
   }
 }

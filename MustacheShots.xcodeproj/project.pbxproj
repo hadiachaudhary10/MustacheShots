@@ -15,7 +15,6 @@
 		D79006CE2B28ECAC007D0263 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D79006CD2B28ECAC007D0263 /* .swiftlint.yml */; };
 		D79006D42B28EDF3007D0263 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006D32B28EDF3007D0263 /* Color+Extensions.swift */; };
 		D79006D62B28EFA1007D0263 /* RecordingsListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006D52B28EFA1007D0263 /* RecordingsListScreen.swift */; };
-		D79006D82B28F994007D0263 /* RecordingsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006D72B28F994007D0263 /* RecordingsListViewModel.swift */; };
 		D79006DA2B290035007D0263 /* VideoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006D92B290035007D0263 /* VideoScreen.swift */; };
 		D79006DC2B290061007D0263 /* VideoScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006DB2B290061007D0263 /* VideoScreenViewModel.swift */; };
 		D79006E32B2A3F48007D0263 /* Mustache1.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = D79006E22B2A3F48007D0263 /* Mustache1.rcproject */; };
@@ -40,7 +39,6 @@
 		D79006CD2B28ECAC007D0263 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D79006D32B28EDF3007D0263 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		D79006D52B28EFA1007D0263 /* RecordingsListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsListScreen.swift; sourceTree = "<group>"; };
-		D79006D72B28F994007D0263 /* RecordingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsListViewModel.swift; sourceTree = "<group>"; };
 		D79006D92B290035007D0263 /* VideoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScreen.swift; sourceTree = "<group>"; };
 		D79006DB2B290061007D0263 /* VideoScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScreenViewModel.swift; sourceTree = "<group>"; };
 		D79006E22B2A3F48007D0263 /* Mustache1.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Mustache1.rcproject; sourceTree = "<group>"; };
@@ -93,8 +91,8 @@
 				D79006D12B28EDBE007D0263 /* CoreDataUtils */,
 				D79006FB2B2B9415007D0263 /* RealityKitObjects */,
 				D79006FE2B2B94B8007D0263 /* ARView */,
-				D79006FC2B2B9456007D0263 /* RecordingList */,
-				D79006FD2B2B9478007D0263 /* VideoScreen */,
+				D79006FC2B2B9456007D0263 /* View */,
+				D79006FD2B2B9478007D0263 /* ViewModel */,
 				D79006D02B28ED91007D0263 /* App */,
 				D79006BD2B28E4E0007D0263 /* Assets.xcassets */,
 				D79006BF2B28E4E0007D0263 /* Preview Content */,
@@ -149,22 +147,21 @@
 			path = RealityKitObjects;
 			sourceTree = "<group>";
 		};
-		D79006FC2B2B9456007D0263 /* RecordingList */ = {
+		D79006FC2B2B9456007D0263 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D79006D72B28F994007D0263 /* RecordingsListViewModel.swift */,
 				D79006D52B28EFA1007D0263 /* RecordingsListScreen.swift */,
+				D79006D92B290035007D0263 /* VideoScreen.swift */,
 			);
-			path = RecordingList;
+			path = View;
 			sourceTree = "<group>";
 		};
-		D79006FD2B2B9478007D0263 /* VideoScreen */ = {
+		D79006FD2B2B9478007D0263 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D79006D92B290035007D0263 /* VideoScreen.swift */,
 				D79006DB2B290061007D0263 /* VideoScreenViewModel.swift */,
 			);
-			path = VideoScreen;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D79006FE2B2B94B8007D0263 /* ARView */ = {
@@ -290,7 +287,6 @@
 				D79006F62B2B8B38007D0263 /* MustacheTypes.swift in Sources */,
 				D7F8525C2B2F004600DE10B6 /* FetchedObjects.swift in Sources */,
 				D79006C62B28E4E0007D0263 /* MustacheShots.xcdatamodeld in Sources */,
-				D79006D82B28F994007D0263 /* RecordingsListViewModel.swift in Sources */,
 				D79006D62B28EFA1007D0263 /* RecordingsListScreen.swift in Sources */,
 				D79006FA2B2B8C61007D0263 /* ARViewController.swift in Sources */,
 				D79006F82B2B8B66007D0263 /* View+Extensions.swift in Sources */,

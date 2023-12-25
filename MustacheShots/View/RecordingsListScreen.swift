@@ -27,6 +27,8 @@ struct VideoPlayerView: UIViewControllerRepresentable {
 
 struct RecordingsListScreen: View {
   @StateObject var viewModel: VideoScreenViewModel
+  @State private var presentAlert = false
+  @State private var newTagline = ""
   @Environment(\.managedObjectContext) private var viewContext
   @FetchRequest(
     sortDescriptors: [NSSortDescriptor(keyPath: \Shot.duration, ascending: true)],
@@ -46,7 +48,16 @@ struct RecordingsListScreen: View {
               }
               .frame(width: geo.size.width * 0.3, height: geo.size.height * 0.2)
               VStack(alignment: .leading) {
-                Text(shot.tag!)
+                HStack {
+                  Text(shot.tag!)
+                  Spacer()
+                  Button {
+                    presentAlert = true
+                  } label: {
+                    Image(systemName: "square.and.pencil")
+                      .imageScale(.medium)
+                  }
+                }
                 Spacer()
                 HStack {
                   Text(shot.duration!)
@@ -63,6 +74,14 @@ struct RecordingsListScreen: View {
             .frame(width: geo.size.width * 0.9, height: geo.size.height * 0.2)
             .background(Color.pastelGrey)
             .cornerRadius(15)
+            .alert("Update Tagline", isPresented: $presentAlert) {
+              TextField("Enter new tagline", text: $newTagline)
+              Button("OK", action: {
+                viewModel.updateTagline(shotID: shot.id, updatedTagline: newTagline)
+              })
+            } message: {
+              Text("")
+            }
           }
         }
         .frame(width: geo.size.width, height: geo.size.height)
