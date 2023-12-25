@@ -15,6 +15,9 @@ struct VideoScreen: View {
   @State var shareVideo: Bool = false
   @State var selectedMustache = MustacheTypes.mustache1
   @StateObject var viewModel: VideoScreenViewModel
+  @State private var presentAlert = false
+  @State private var tagline = ""
+  @Environment(\.dismiss) private var dismiss
   var body: some View {
     GeometryReader { geo in
       VStack {
@@ -55,9 +58,7 @@ struct VideoScreen: View {
                   self.url = try await stopRecording()
                   isRecording = false
                   shareVideo.toggle()
-                  if let url {
-                    viewModel.saveVideoToAlbum(videoURL: url, albumName: "MyAlbum")
-                  }
+                  presentAlert = true
                 } catch {
                   print(error.localizedDescription)
                 }
@@ -82,6 +83,19 @@ struct VideoScreen: View {
         .frame(width: geo.size.width, height: geo.size.height * 0.15)
       }
       .frame(width: geo.size.width, height: geo.size.height)
+    }
+    .alert("Tagline for Video", isPresented: $presentAlert) {
+      TextField("Enter your name", text: $tagline)
+      Button("OK", action: submit)
+    } message: {
+      Text("")
+    }
+  }
+  func submit() {
+    print("You entered \(tagline)")
+    if let url {
+      viewModel.saveVideoURLToCoreData(videoURL: url, tag: tagline)
+     dismiss()
     }
   }
 }

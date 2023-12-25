@@ -6,45 +6,63 @@
 //
 
 import SwiftUI
+import CoreData
+import AVKit
+
+struct VideoPlayerView: UIViewControllerRepresentable {
+  let videoURLString: String
+  func makeUIViewController(context: Context) -> AVPlayerViewController {
+    guard let videoURL = URL(string: videoURLString) else {
+      fatalError("Invalid video URL string")
+    }
+    let playerItem = AVPlayerItem(url: videoURL)
+    let player = AVPlayer(playerItem: playerItem)
+    let playerViewController = AVPlayerViewController()
+    playerViewController.player = player
+    playerViewController.showsPlaybackControls = true
+    return playerViewController
+  }
+  func updateUIViewController(_ uiViewController: AVPlayerViewController, context: Context) {}
+}
 
 struct RecordingsListScreen: View {
-  @StateObject var viewModel: RecordingsListViewModel
+  @StateObject var viewModel: VideoScreenViewModel
+  @Environment(\.managedObjectContext) private var viewContext
+  @FetchRequest(
+    sortDescriptors: [NSSortDescriptor(keyPath: \Shot.duration, ascending: true)],
+    animation: .default)
+  private var shots: FetchedResults<Shot>
   var body: some View {
     NavigationStack {
       GeometryReader { geo in
-        ScrollView(.vertical) {
-          VStack(alignment: .leading) {
-            ForEach(0..<viewModel.numberOfShots) { _ in
-              HStack {
-                Image(systemName: "square.fill")
-                  .resizable()
-                  .frame(width: geo.size.height/7, height: geo.size.height/7)
-                  .padding(.leading)
-                  .foregroundColor(Color.imagePlaceholder)
-                VStack(alignment: .leading) {
-                  Text("Heyy")
+        ScrollView {
+          ForEach(shots) { shot in
+            HStack(alignment: .center) {
+              VStack(alignment: .center) {
+                VideoPlayer(player: AVPlayer(url: URL(string: shot.videoURL!)!))
+                  .scaledToFit()
+                  .frame(width: geo.size.width * 0.3, height: geo.size.height * 0.2)
+                  .cornerRadius(15)
+              }
+              .frame(width: geo.size.width * 0.3, height: geo.size.height * 0.2)
+              VStack(alignment: .leading) {
+                Text(shot.tag!)
+                Spacer()
+                HStack {
+                  Text(shot.duration!)
                   Spacer()
-                  HStack {
-                    Text("6:05")
-                    Spacer()
-                    Button {
-                      print("Button tapped")
-                    } label: {
-                      Image(systemName: "square.and.pencil")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 20, height: 20)
-                    }
+                  NavigationLink(destination: VideoPlayerView(videoURLString: shot.videoURL!)) {
+                    Image(systemName: "chevron.right")
+                      .imageScale(.medium)
                   }
                 }
-                .padding(.all)
-                Spacer()
               }
-              .frame(height: geo.size.height/6)
-              .background(Color.pastelGrey)
-              .cornerRadius(10)
-              .padding(.horizontal)
+              .padding(.vertical)
+              .frame(width: geo.size.width * 0.5, height: geo.size.height * 0.2)
             }
+            .frame(width: geo.size.width * 0.9, height: geo.size.height * 0.2)
+            .background(Color.pastelGrey)
+            .cornerRadius(15)
           }
         }
         .frame(width: geo.size.width, height: geo.size.height)
@@ -63,6 +81,6 @@ struct RecordingsListScreen: View {
 
 struct RecordingsListScreen_Previews: PreviewProvider {
   static var previews: some View {
-    RecordingsListScreen(viewModel: RecordingsListViewModel())
+    RecordingsListScreen(viewModel: VideoScreenViewModel())
   }
 }

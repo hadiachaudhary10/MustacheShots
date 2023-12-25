@@ -9,12 +9,11 @@ import SwiftUI
 
 @main
 struct MustacheShotsApp: App {
-    let persistenceController = PersistenceController.shared
-
-    var body: some Scene {
-        WindowGroup {
-            RecordingsListScreen(viewModel: RecordingsListViewModel())
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-        }
+  let persistenceController = PersistenceController.shared
+  var body: some Scene {
+    WindowGroup {
+      RecordingsListScreen(viewModel: VideoScreenViewModel())
+        .environment(\.managedObjectContext, persistenceController.container.viewContext)
     }
+  }
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D79006BA2B28E4DE007D0263 /* MustacheShotsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006B92B28E4DE007D0263 /* MustacheShotsApp.swift */; };
-		D79006BC2B28E4DE007D0263 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006BB2B28E4DE007D0263 /* ContentView.swift */; };
 		D79006BE2B28E4E0007D0263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D79006BD2B28E4E0007D0263 /* Assets.xcassets */; };
 		D79006C12B28E4E0007D0263 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D79006C02B28E4E0007D0263 /* Preview Assets.xcassets */; };
 		D79006C32B28E4E0007D0263 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006C22B28E4E0007D0263 /* Persistence.swift */; };
@@ -24,12 +23,16 @@
 		D79006F62B2B8B38007D0263 /* MustacheTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006F52B2B8B38007D0263 /* MustacheTypes.swift */; };
 		D79006F82B2B8B66007D0263 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006F72B2B8B66007D0263 /* View+Extensions.swift */; };
 		D79006FA2B2B8C61007D0263 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79006F92B2B8C61007D0263 /* ARViewController.swift */; };
+		D7F8524F2B2EF54100DE10B6 /* ShotData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8524E2B2EF54100DE10B6 /* ShotData.swift */; };
+		D7F852512B2EF5AD00DE10B6 /* ShotsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F852502B2EF5AD00DE10B6 /* ShotsList.swift */; };
+		D7F852592B2EFA7400DE10B6 /* Shot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F852572B2EFA7400DE10B6 /* Shot+CoreDataClass.swift */; };
+		D7F8525A2B2EFA7400DE10B6 /* Shot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F852582B2EFA7400DE10B6 /* Shot+CoreDataProperties.swift */; };
+		D7F8525C2B2F004600DE10B6 /* FetchedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8525B2B2F004600DE10B6 /* FetchedObjects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D79006B62B28E4DE007D0263 /* MustacheShots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MustacheShots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D79006B92B28E4DE007D0263 /* MustacheShotsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustacheShotsApp.swift; sourceTree = "<group>"; };
-		D79006BB2B28E4DE007D0263 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D79006BD2B28E4E0007D0263 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D79006C02B28E4E0007D0263 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D79006C22B28E4E0007D0263 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -46,6 +49,11 @@
 		D79006F52B2B8B38007D0263 /* MustacheTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustacheTypes.swift; sourceTree = "<group>"; };
 		D79006F72B2B8B66007D0263 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		D79006F92B2B8C61007D0263 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		D7F8524E2B2EF54100DE10B6 /* ShotData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotData.swift; sourceTree = "<group>"; };
+		D7F852502B2EF5AD00DE10B6 /* ShotsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotsList.swift; sourceTree = "<group>"; };
+		D7F852572B2EFA7400DE10B6 /* Shot+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shot+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D7F852582B2EFA7400DE10B6 /* Shot+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shot+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D7F8525B2B2F004600DE10B6 /* FetchedObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedObjects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,15 +88,15 @@
 			isa = PBXGroup;
 			children = (
 				D79006EA2B2B05EC007D0263 /* Info.plist */,
+				D7F8524D2B2EF51800DE10B6 /* Model */,
 				D79006D22B28EDE1007D0263 /* Helpers */,
-				D79006D12B28EDBE007D0263 /* Backend */,
+				D79006D12B28EDBE007D0263 /* CoreDataUtils */,
 				D79006FB2B2B9415007D0263 /* RealityKitObjects */,
 				D79006FE2B2B94B8007D0263 /* ARView */,
 				D79006FC2B2B9456007D0263 /* RecordingList */,
 				D79006FD2B2B9478007D0263 /* VideoScreen */,
 				D79006D02B28ED91007D0263 /* App */,
 				D79006BD2B28E4E0007D0263 /* Assets.xcassets */,
-				D79006C42B28E4E0007D0263 /* MustacheShots.xcdatamodeld */,
 				D79006BF2B28E4E0007D0263 /* Preview Content */,
 			);
 			path = MustacheShots;
@@ -106,17 +114,19 @@
 			isa = PBXGroup;
 			children = (
 				D79006B92B28E4DE007D0263 /* MustacheShotsApp.swift */,
-				D79006BB2B28E4DE007D0263 /* ContentView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
 		};
-		D79006D12B28EDBE007D0263 /* Backend */ = {
+		D79006D12B28EDBE007D0263 /* CoreDataUtils */ = {
 			isa = PBXGroup;
 			children = (
+				D79006C42B28E4E0007D0263 /* MustacheShots.xcdatamodeld */,
 				D79006C22B28E4E0007D0263 /* Persistence.swift */,
+				D7F852572B2EFA7400DE10B6 /* Shot+CoreDataClass.swift */,
+				D7F852582B2EFA7400DE10B6 /* Shot+CoreDataProperties.swift */,
 			);
-			path = Backend;
+			path = CoreDataUtils;
 			sourceTree = "<group>";
 		};
 		D79006D22B28EDE1007D0263 /* Helpers */ = {
@@ -125,6 +135,7 @@
 				D79006D32B28EDF3007D0263 /* Color+Extensions.swift */,
 				D79006F72B2B8B66007D0263 /* View+Extensions.swift */,
 				D79006F52B2B8B38007D0263 /* MustacheTypes.swift */,
+				D7F8525B2B2F004600DE10B6 /* FetchedObjects.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -162,6 +173,15 @@
 				D79006F92B2B8C61007D0263 /* ARViewController.swift */,
 			);
 			path = ARView;
+			sourceTree = "<group>";
+		};
+		D7F8524D2B2EF51800DE10B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7F8524E2B2EF54100DE10B6 /* ShotData.swift */,
+				D7F852502B2EF5AD00DE10B6 /* ShotsList.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,17 +283,21 @@
 				D79006C32B28E4E0007D0263 /* Persistence.swift in Sources */,
 				D79006E32B2A3F48007D0263 /* Mustache1.rcproject in Sources */,
 				D79006DC2B290061007D0263 /* VideoScreenViewModel.swift in Sources */,
+				D7F852512B2EF5AD00DE10B6 /* ShotsList.swift in Sources */,
+				D7F8524F2B2EF54100DE10B6 /* ShotData.swift in Sources */,
+				D7F852592B2EFA7400DE10B6 /* Shot+CoreDataClass.swift in Sources */,
 				D79006D42B28EDF3007D0263 /* Color+Extensions.swift in Sources */,
 				D79006F62B2B8B38007D0263 /* MustacheTypes.swift in Sources */,
+				D7F8525C2B2F004600DE10B6 /* FetchedObjects.swift in Sources */,
 				D79006C62B28E4E0007D0263 /* MustacheShots.xcdatamodeld in Sources */,
 				D79006D82B28F994007D0263 /* RecordingsListViewModel.swift in Sources */,
 				D79006D62B28EFA1007D0263 /* RecordingsListScreen.swift in Sources */,
 				D79006FA2B2B8C61007D0263 /* ARViewController.swift in Sources */,
-				D79006BC2B28E4DE007D0263 /* ContentView.swift in Sources */,
 				D79006F82B2B8B66007D0263 /* View+Extensions.swift in Sources */,
 				D79006DA2B290035007D0263 /* VideoScreen.swift in Sources */,
 				D79006E72B2A47BF007D0263 /* Mustache2.rcproject in Sources */,
 				D79006BA2B28E4DE007D0263 /* MustacheShotsApp.swift in Sources */,
+				D7F8525A2B2EFA7400DE10B6 /* Shot+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

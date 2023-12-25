@@ -8,8 +8,11 @@
 import Foundation
 import Photos
 import AVFoundation
+import CoreData
 
 class VideoScreenViewModel: ObservableObject {
+  @Published var numberOfShots: Int = 5
+  @Published var shots: [Shot] = []
   init() {}
   func saveVideoToAlbum(videoURL: URL, albumName: String) {
     if albumExists(albumName: albumName) {
@@ -55,5 +58,33 @@ class VideoScreenViewModel: ObservableObject {
         print("Error saving video to album: \(error?.localizedDescription ?? "")")
       }
     })
+  }
+  func saveVideoURLToCoreData(videoURL: URL, tag: String) {
+    let context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+    context.parent = PersistenceController.shared.container.viewContext
+    let videoEntity = Shot(context: context)
+    videoEntity.videoURL = videoURL.absoluteString
+    videoEntity.duration = getVideoDuration(from: videoURL)
+    videoEntity.tag = tag
+    videoEntity.id = UUID().uuidString
+    do {
+      try context.save()
+      print("Video saved to Core Data")
+    } catch {
+      print("Error saving video URL to Core Data: \(error.localizedDescription)")
+    }
+  }
+  func getVideoDuration(from path: URL) -> String {
+    let asset = AVURLAsset(url: path)
+    let duration: CMTime = asset.duration
+    let totalSeconds = CMTimeGetSeconds(duration)
+    let hours = Int(totalSeconds / 3600)
+    let minutes = Int((totalSeconds.truncatingRemainder(dividingBy: 3600)) / 60)
+    let seconds = Int(totalSeconds.truncatingRemainder(dividingBy: 60))
+    if hours > 0 {
+      return String(format: "%i:%02i:%02i", hours, minutes, seconds)
+    } else {
+      return String(format: "%02i:%02i", minutes, seconds)
+    }
   }
 }
